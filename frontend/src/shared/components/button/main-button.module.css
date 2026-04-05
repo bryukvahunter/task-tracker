@@ -1,0 +1,19 @@
+.mainButton {
+  font-family: "Overpass";
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 20px;
+
+  background-color: #000b30;
+  color: #e7edfd;
+  border: 2px solid #cec3ff;
+  border-radius: 12px;
+
+  padding: 10px 32px;
+  transform: all 0.2s ease;
+}
+
+.mainButton:active {
+  background-color: #0c2c93;
+  transform: translateY(1px);
+}

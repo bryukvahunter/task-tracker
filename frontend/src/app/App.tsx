@@ -1,7 +1,8 @@
 import "../shared/styles/App.css";
+import { MainLayout } from "../widgets/main-layout";
 
 function App() {
-  return <></>;
+  return <MainLayout />;
 }
 
 export default App;
