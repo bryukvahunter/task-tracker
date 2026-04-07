@@ -1,6 +1,5 @@
 generator client {
-  provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -8,8 +7,23 @@ datasource db {
 }
 
 model Task {
-  id        Int      @id @default(autoincrement())
-  title     String
-  completed Boolean  @default(false)
-  createdAt DateTime @default(now())
+  id          Int          @id @default(autoincrement())
+  title       String
+  description String      @default("")
+  dueDate     DateTime?
+  status      TaskStatus   @default(todo)
+  priority    TaskPriority @default(low)
+  createAt    DateTime     @default(now()) @map("createdAt")
+  updateAt    DateTime     @updatedAt @map("updatedAt")
+}
+
+enum TaskStatus {
+  todo
+  inProgress
+  done
+}
+
+enum TaskPriority {
+  low
+  high
 }
