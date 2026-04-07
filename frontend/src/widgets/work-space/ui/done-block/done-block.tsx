@@ -1,16 +1,25 @@
+import type { Tasks } from "@/entities/task/types/task";
 import { Task } from "../task/task";
 import styles from "./done-block.module.css";
 
-export function DoneBlock() {
+interface Props {
+  tasks: Tasks;
+}
+
+export function DoneBlock({ tasks }: Props) {
+  const quantity = tasks.length;
+
   return (
     <div className={styles.statusBlock}>
       <header className={styles.statusHeader}>
-        <div className={styles.statusHeaderTitle}>To do</div>
-        <div className={styles.statusHeaderQuantity}>3</div>
+        <div className={styles.statusHeaderTitle}>Done</div>
+        <div className={styles.statusHeaderQuantity}>{quantity}</div>
       </header>
 
       <div className={styles.tasksBlock}>
-        <Task />
+        {tasks.map((task) => (
+          <Task key={task.id} task={task} />
+        ))}
       </div>
     </div>
   );
