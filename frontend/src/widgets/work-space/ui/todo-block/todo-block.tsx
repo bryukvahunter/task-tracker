@@ -1,18 +1,18 @@
 import type { Tasks } from "@/entities/task/types/task";
+import styles from "./todo-block.module.css";
 import { Task } from "../task/task";
-import styles from "./in-progress-block.module.css";
 
 interface Props {
   tasks: Tasks;
 }
 
-export function InProgressBlock({ tasks }: Props) {
+export function TodoBlock({ tasks }: Props) {
   const quantity = tasks.length;
 
   return (
     <div className={styles.statusBlock}>
       <header className={styles.statusHeader}>
-        <div className={styles.statusHeaderTitle}>In progress</div>
+        <div className={styles.statusHeaderTitle}>To do</div>
         <div className={styles.statusHeaderQuantity}>{quantity}</div>
       </header>
 
