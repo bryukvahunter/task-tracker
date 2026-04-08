@@ -11,8 +11,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px;
-  background-color: #e6fcf8;
-  border: 2px solid #b3f5e9;
   border-radius: 12px;
 }
 
@@ -29,7 +27,6 @@
   font-size: 16px;
   line-height: 28px;
   font-weight: 400;
-  background-color: #00dcb4;
   color: white;
   border-radius: 50%;
 }
@@ -38,8 +35,32 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: #e6fcf8;
-  border: 2px solid #b3f5e9;
   padding: 16px;
   border-radius: 12px;
+}
+
+.todoHeader,
+.todoBlock {
+  background-color: #feebf3;
+  border: 2px solid #fac1d9;
+}
+.inProgressHeader,
+.inProgressBlock {
+  background-color: #feefeb;
+  border: 2px solid #fbcec1;
+}
+.doneHeader,
+.doneBlock {
+  background-color: #e6fcf8;
+  border: 2px solid #b3f5e9;
+}
+
+.todoHeaderQuantity {
+  background-color: #ee2f80;
+}
+.inProgressHeaderQuantity {
+  background-color: #f15a2e;
+}
+.doneHeaderQuantity {
+  background-color: #00dcb4;
 }
